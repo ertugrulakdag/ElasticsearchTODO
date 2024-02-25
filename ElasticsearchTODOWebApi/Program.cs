@@ -9,7 +9,6 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-builder.Services.Configure<ConfigurationModel>(builder.Configuration.GetSection("JWT"));
 builder.Services.AddScoped(typeof(IElasticSearchManager<>), typeof(ElasticSearchManager<>));
 var app = builder.Build();
 
